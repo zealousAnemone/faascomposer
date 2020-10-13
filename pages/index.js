@@ -1,65 +1,84 @@
-import Head from 'next/head'
-import styles from '../styles/Home.module.css'
+import 'bootstrap/dist/css/bootstrap.min.css';
+import Head from 'next/head';
+import {
+  Button,
+  Col,
+  Container,
+  Image,
+  Jumbotron,
+  Navbar,
+  Nav,
+  Row,
+} from 'react-bootstrap';
+import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
+import { faGithubAlt } from '@fortawesome/free-brands-svg-icons';
+
+//import styles from '../styles/Home.module.css';
 
 export default function Home() {
   return (
-    <div className={styles.container}>
+    <div>
       <Head>
-        <title>Create Next App</title>
+        <title>FaaSComposer</title>
         <link rel="icon" href="/favicon.ico" />
       </Head>
+      <Navbar bg="dark" variant="dark">
+        <Navbar.Brand href="#">FaaSComposer</Navbar.Brand>
+        <Nav className="ml-auto">
+          <Button variant="outline-info">Log In</Button>
+        </Nav>
+      </Navbar>
+      <Jumbotron className="centered">
+        <h1>FaaSComposer</h1>
+        <p>A graphical user interface for composing FaaS workflows</p>
+        <Button variant="info" size="lg">
+          Get Started
+        </Button>
+      </Jumbotron>
 
-      <main className={styles.main}>
-        <h1 className={styles.title}>
-          Welcome to <a href="https://nextjs.org">Next.js!</a>
-        </h1>
-
-        <p className={styles.description}>
-          Get started by editing{' '}
-          <code className={styles.code}>pages/index.js</code>
+      <div className="page-section">
+        <h2>Features</h2>
+      </div>
+      <div className="grey-background page-section">
+        <h2>Meet the Team</h2>
+        <Row>
+          <Col xs={12} md={6} lg={3}>
+            <Image src="" roundedCircle />
+            <p>Mariya Eyges</p>
+            <FontAwesomeIcon icon={faGithubAlt} className="lg-icon" />
+          </Col>
+          <Col xs={12} md={6} lg={3}>
+            <Image src="" roundedCircle />
+            <p>Umar Karim</p>
+            <FontAwesomeIcon icon={faGithubAlt} className="lg-icon" />
+          </Col>
+          <Col xs={12} md={6} lg={3}>
+            <Image src="" roundedCircle />
+            <p>Jhonatan Passalacqua</p>
+            <FontAwesomeIcon icon={faGithubAlt} className="lg-icon" />
+          </Col>
+          <Col xs={12} md={6} lg={3}>
+            <Image src="" roundedCircle />
+            <p>Veronica Stork</p>
+            <FontAwesomeIcon icon={faGithubAlt} className="lg-icon" />
+          </Col>
+        </Row>
+      </div>
+      <div className="page-section">
+        <h2>Contributing</h2>
+        <p>
+          FaaSComposer is an open-source project. Check out our Github repo to
+          see how you can contribute!
+          <br />
+          <Button variant="info" size="lg" style={{ 'margin-top': '20px' }}>
+            Github
+            <FontAwesomeIcon
+              icon={faGithubAlt}
+              style={{ 'margin-left': '10px', 'font-size': '1.2em' }}
+            />
+          </Button>
         </p>
-
-        <div className={styles.grid}>
-          <a href="https://nextjs.org/docs" className={styles.card}>
-            <h3>Documentation &rarr;</h3>
-            <p>Find in-depth information about Next.js features and API.</p>
-          </a>
-
-          <a href="https://nextjs.org/learn" className={styles.card}>
-            <h3>Learn &rarr;</h3>
-            <p>Learn about Next.js in an interactive course with quizzes!</p>
-          </a>
-
-          <a
-            href="https://github.com/vercel/next.js/tree/master/examples"
-            className={styles.card}
-          >
-            <h3>Examples &rarr;</h3>
-            <p>Discover and deploy boilerplate example Next.js projects.</p>
-          </a>
-
-          <a
-            href="https://vercel.com/import?filter=next.js&utm_source=create-next-app&utm_medium=default-template&utm_campaign=create-next-app"
-            className={styles.card}
-          >
-            <h3>Deploy &rarr;</h3>
-            <p>
-              Instantly deploy your Next.js site to a public URL with Vercel.
-            </p>
-          </a>
-        </div>
-      </main>
-
-      <footer className={styles.footer}>
-        <a
-          href="https://vercel.com?utm_source=create-next-app&utm_medium=default-template&utm_campaign=create-next-app"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Powered by{' '}
-          <img src="/vercel.svg" alt="Vercel Logo" className={styles.logo} />
-        </a>
-      </footer>
+      </div>
     </div>
-  )
+  );
 }

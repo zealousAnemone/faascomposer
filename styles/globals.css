@@ -1,11 +1,36 @@
+@import url('https://fonts.googleapis.com/css2?family=Montserrat&family=Work+Sans:wght@900&display=swap');
+
 html,
 body {
+  text-align: center;
   padding: 0;
   margin: 0;
-  font-family: -apple-system, BlinkMacSystemFont, Segoe UI, Roboto, Oxygen,
-    Ubuntu, Cantarell, Fira Sans, Droid Sans, Helvetica Neue, sans-serif;
 }
 
+.centered {
+  text-align: center;
+}
+
+.page-section {
+  text-align: center;
+  padding: 60px 10px;
+}
+.lg-icon {
+  font-size: 2.3em;
+}
+
+.grey-background {
+  background-color: #e9ecef;
+}
+h1,
+h2,
+h3 {
+  font-family: 'Work Sans', sans-serif;
+}
+
+p {
+  font-family: 'Montserrat', sans-serif;
+}
 a {
   color: inherit;
   text-decoration: none;
